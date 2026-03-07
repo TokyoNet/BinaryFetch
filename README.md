@@ -191,7 +191,7 @@ BinaryFetch **never breaks** due to user mistakes. (expect json syntax)
 - **Theme System**: Consistent color scheme across all modules
 
 ### **📈 Statistics:**
-- **Total Configurable Options**: 300+ individual settings
+- **Total Configurable Options**: 300+ individual settings (json toggle & color adjustment)
 - **Color Properties**: 150+ color configuration points
 - **Toggle Switches**: 80+ enable/disable controls
 - **Sub-section Controls**: 60+ detailed display options
