@@ -19,12 +19,9 @@ Built for Windows. Built to last. Built to be shared.
 <details>
   <summary><b>Click to expand Project Previews</b></summary>
 
-![alt](https://github.com/InterCentury/BinaryFetch/blob/main/Previews/Screenshot%202026-01-03%20013625.png?raw=true)
-![alt](https://github.com/InterCentury/BinaryFetch/raw/main/123456.png)
-![alt](https://github.com/InterCentury/BinaryFetch/blob/main/Previews/Screenshot%202026-01-04%20050547.png?raw=true)
-![alt](https://github.com/InterCentury/BinaryFetch/blob/main/Previews/Screenshot%202026-01-04%20050231.png?raw=true)
-![alt](https://github.com/InterCentury/BinaryFetch/blob/main/Visual%20Instructions/21312.png?raw=true)
- 
+![alt](https://github.com/BinaryFetch-CLI/BinaryFetch/blob/5c7beffcc4306b2e3d8ef5ddec5a64cd1549dae8/Previews/06_preview.jpg)
+![alt](https://github.com/BinaryFetch-CLI/BinaryFetch/blob/5c7beffcc4306b2e3d8ef5ddec5a64cd1549dae8/Previews/05_preview.jpg)
+
   </details>
 
 
