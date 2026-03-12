@@ -1,12 +1,12 @@
 #include "include\compact_disk_info.h"
 #include <windows.h>
-using namespace std;
+
 DiskInfo::DiskInfo() {
     // Constructor (empty)
 }
 
 // Calculate used percentage for a single disk (integer)
-int DiskInfo::calculateUsedPercentage(const string& driveLetter) {
+int DiskInfo::calculateUsedPercentage(const std::string& driveLetter) {
     ULARGE_INTEGER freeBytesAvailable, totalNumberOfBytes, totalNumberOfFreeBytes;
 
     if (GetDiskFreeSpaceExA(driveLetter.c_str(),
@@ -26,11 +26,11 @@ int DiskInfo::calculateUsedPercentage(const string& driveLetter) {
 }
 
 // Get all disk usage (%)
-vector<pair<string, int>> DiskInfo::getAllDiskUsage() {
-    vector<pair<string, int>> diskList;
+std::vector<std::pair<std::string, int>> DiskInfo::getAllDiskUsage() {
+    std::vector<std::pair<std::string, int>> diskList;
 
     for (char drive = 'A'; drive <= 'Z'; ++drive) {
-        string driveLetter = string(1, drive) + ":\\";
+        std::string driveLetter = std::string(1, drive) + ":\\";
 
         if (GetDriveTypeA(driveLetter.c_str()) == DRIVE_FIXED ||
             GetDriveTypeA(driveLetter.c_str()) == DRIVE_REMOVABLE) {
@@ -44,7 +44,7 @@ vector<pair<string, int>> DiskInfo::getAllDiskUsage() {
 }
 
 // Helper: calculate capacity in GB
-int DiskInfo::calculateCapacityGB(const string& driveLetter) {
+int DiskInfo::calculateCapacityGB(const std::string& driveLetter) {
     ULARGE_INTEGER freeBytesAvailable, totalNumberOfBytes, totalNumberOfFreeBytes;
 
     if (GetDiskFreeSpaceExA(driveLetter.c_str(),
@@ -59,11 +59,11 @@ int DiskInfo::calculateCapacityGB(const string& driveLetter) {
 }
 
 // Get all disk capacities in GB
-vector<pair<string, int>> DiskInfo::getDiskCapacity() {
-    vector<pair<string, int>> diskCapList;
+std::vector<std::pair<std::string, int>> DiskInfo::getDiskCapacity() {
+    std::vector<std::pair<std::string, int>> diskCapList;
 
     for (char drive = 'A'; drive <= 'Z'; ++drive) {
-        string driveLetter = string(1, drive) + ":\\";
+        std::string driveLetter = std::string(1, drive) + ":\\";
 
         if (GetDriveTypeA(driveLetter.c_str()) == DRIVE_FIXED ||
             GetDriveTypeA(driveLetter.c_str()) == DRIVE_REMOVABLE) {
