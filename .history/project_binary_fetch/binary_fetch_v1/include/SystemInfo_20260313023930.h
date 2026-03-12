@@ -14,5 +14,5 @@ public:
     string get_motherboard_manufacturer();
 
 private:
-    string read_registry_value(const std::string& subkey, const std::string& valueName);
+    std::string read_registry_value(const std::string& subkey, const std::string& valueName);
 };

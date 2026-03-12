@@ -25,7 +25,7 @@ public:
     vector<storage_data> get_all_storage_info();
 
     // NEW: Process disks one-by-one with callback
-    void process_storage_info(function<void(const storage_data&)> callback);
+    void process_storage_info(std::function<void(const storage_data&)> callback);
 
 private:
     string get_storage_type(const string& drive_letter, const string& root_path, bool is_external);

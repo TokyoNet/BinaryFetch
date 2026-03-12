@@ -3,7 +3,7 @@
 
 #include <string>
 #include <windows.h>
-using namespace std;
+
 class TimeInfo {
 private:
     SYSTEMTIME systemTime;
@@ -24,11 +24,11 @@ public:
     // Date components
     int getDay() const;
     int getWeekNumber() const;
-    string getDayName() const;
+    std::string getDayName() const;
     int getMonthNumber() const;
-    string getMonthName() const;
+    std::string getMonthName() const;
     int getYearNumber() const;
-    string getLeapYear() const;  // Returns "Yes" or "No"
+    std::string getLeapYear() const;  // Returns "Yes" or "No"
 
     // Refresh system time
     void refresh();

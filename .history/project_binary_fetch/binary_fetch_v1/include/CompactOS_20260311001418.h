@@ -5,8 +5,8 @@
 using namespace std;
 class CompactOS {
 public:
-    string getOSName();
-    string getOSBuild();
-    string getArchitecture();
-    string getUptime();
+    std::string getOSName();
+    std::string getOSBuild();
+    std::string getArchitecture();
+    std::string getUptime();
 };

@@ -3,17 +3,17 @@
 #include <string>
 #include <vector>
 #include <windows.h>
-using namespace std;
+
 struct ScreenInfo {
-    string name;           // Friendly display name (e.g., "ASUS VG27AQ")
+    std::string name;           // Friendly display name (e.g., "ASUS VG27AQ")
     int native_width;           // Actual panel resolution width
     int native_height;          // Actual panel resolution height
     int current_width;          // Current Windows desktop resolution width
     int current_height;         // Current Windows desktop resolution height
     int refresh_rate;           // Refresh rate in Hz
     int scale_percent;          // Windows DPI scaling (e.g., 100, 125, 150, 175, 200)
-    string scale_mul;      // Formatted scale multiplier (e.g., "1x", "1.75x")
-    string upscale;        // GPU upscale info (e.g., "Off", "2x (NVIDIA DSR)", "4x (AMD VSR)")
+    std::string scale_mul;      // Formatted scale multiplier (e.g., "1x", "1.75x")
+    std::string upscale;        // GPU upscale info (e.g., "Off", "2x (NVIDIA DSR)", "4x (AMD VSR)")
 };
 
 class CompactScreen {
@@ -21,7 +21,7 @@ public:
     CompactScreen();
 
     // Get all detected screens
-    vector<ScreenInfo> getScreens() const { return screens; }
+    std::vector<ScreenInfo> getScreens() const { return screens; }
 
     // Check if NVIDIA GPU is present
     static bool isNvidiaPresent();
@@ -30,7 +30,7 @@ public:
     static bool isAMDPresent();
 
     // Convert scale percentage to multiplier string (e.g., 150 -> "1.5x")
-    static string scaleMultiplier(int scalePercent);
+    static std::string scaleMultiplier(int scalePercent);
 
     // Compute upscale factor from current vs native resolution
     static int computeUpscaleFactor(int currentWidth, int nativeWidth);
@@ -39,7 +39,7 @@ public:
     bool refresh();
 
 private:
-    vector<ScreenInfo> screens;
+    std::vector<ScreenInfo> screens;
 
     // Population methods
     bool populateFromDXGI();
@@ -47,11 +47,11 @@ private:
     bool enrichWithADL();
 
     // Helper to get friendly name from EDID
-    string getFriendlyNameFromEDID(const wstring& deviceName);
+    std::string getFriendlyNameFromEDID(const std::wstring& deviceName);
 
     // Helper to parse EDID for native resolution and name
     struct EDIDInfo {
-        string friendlyName;
+        std::string friendlyName;
         int nativeWidth;
         int nativeHeight;
         bool valid;
